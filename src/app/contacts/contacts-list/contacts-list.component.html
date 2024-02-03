@@ -1,3 +1,6 @@
+<app-header>
+  <p content>Lista wszystkich kontaktów</p>
+</app-header>
 <table *ngIf="dataSource.length > 0; else contactsAlert" mat-table [dataSource]="dataSource">
 
     <!--- Note that these columns can be defined in any order.

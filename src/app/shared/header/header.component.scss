@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 1.6rem;
+}
+
+p:nth-of-type(1) {
+    text-transform: uppercase;
+}
