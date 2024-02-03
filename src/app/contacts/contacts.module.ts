@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { ContactsListComponent } from './contacts-list/contacts-list.component';
     ContactsListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatTableModule
   ],
   exports: [
     ContactsListComponent

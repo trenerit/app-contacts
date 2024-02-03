@@ -1,20 +1,22 @@
-<table>
-    <thead>
-        <tr>
-            <th>Lp</th>
-            <th>Nazwisko</th>
-            <th>Imię</th>
-            <th>Nr telefonu</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let contact of data; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td>{{ contact.firstname }}</td>
-            <td>{{ contact.lastname }}</td>
-            <td>{{ contact.phoneNumber }}</td>
-        </tr>
-    </tbody>
-</table>
+<table mat-table [dataSource]="dataSource">
 
-<button>Dodaj</button>
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Lp Column -->
+    <ng-container matColumnDef="lp">
+      <th mat-header-cell *matHeaderCellDef> Lp </th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }} </td>
+    </ng-container>
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="surname">
+      <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
+      <td mat-cell *matCellDef="let element"> {{ element.surname }} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
