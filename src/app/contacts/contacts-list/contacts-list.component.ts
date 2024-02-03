@@ -8,7 +8,7 @@ import { ContactModel } from '../../models/contact-model';
 })
 export class ContactsListComponent {
 
-  displayedColumns: string[] = ['lp', 'surname'];
+  displayedColumns: string[] = ['lp', 'surname', 'firstname', 'city', 'action'];
 
   dataSource: ContactModel[] = [
     {id: 1, firstname: 'Anna', surname: 'Kowalska', phoneNumber: '+48 123456789', email: 'email1@example.com', city: 'Kraków'},
