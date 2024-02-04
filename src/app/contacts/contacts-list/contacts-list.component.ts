@@ -33,6 +33,13 @@ export class ContactsListComponent {
   }
 
   delContact(idContact: number): void {
-    alert(idContact);
+    const conf = confirm('Czy chcesz usunąć daną pozycję?');
+    if(conf) {
+      this.contactsService.removeContact(idContact).subscribe(dataFromSrv => {
+        // console.log(dataFromSrv);
+        if(dataFromSrv.status === 'ok')
+          this.loadContacts();
+      });
+    }
   }
 }
