@@ -30,6 +30,11 @@ export class ContactViewComponent {
       const [ data ] = dataFromSrv;
       this.contactDetails = data;
     });
+    this.sub.add(subGetContact);
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
 }
