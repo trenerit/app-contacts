@@ -6,10 +6,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { SharedModule } from '../shared/shared.module';
+import { ContactViewComponent } from './contact-view/contact-view.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    ContactsListComponent
+    ContactsListComponent,
+    ContactViewComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +20,8 @@ import { SharedModule } from '../shared/shared.module';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [
     ContactsListComponent

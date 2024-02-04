@@ -36,7 +36,8 @@ export class ContactsListComponent {
     this.sub.add(subLoadContacts);
   }
 
-  delContact(idContact: number): void {
+  delContact(e:Event, idContact: number): void {
+    e.stopPropagation();
     const conf = confirm('Czy chcesz usunąć daną pozycję?');
     if(conf) {
       const subDelContact = this.contactsService.removeContact(idContact).subscribe(dataFromSrv => {
