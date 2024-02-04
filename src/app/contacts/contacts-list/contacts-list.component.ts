@@ -32,4 +32,7 @@ export class ContactsListComponent {
     });
   }
 
+  delContact(idContact: number): void {
+    alert(idContact);
+  }
 }
