@@ -74,7 +74,11 @@ export class ContactsListComponent {
     const dialogRef = this.dialog.open(ContactAddModComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+     
+      if(result.reload === 1) {
+        this.loadContacts();
+      }
+
     });
   }
 

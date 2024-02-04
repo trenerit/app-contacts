@@ -12,6 +12,7 @@ import { ContactAddModComponent } from './contact-add-mod/contact-add-mod.compon
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CommonModule,
     SharedModule,
     RouterModule,
+    ReactiveFormsModule,
     MatTableModule,
     MatButtonModule,
     MatIconModule,
